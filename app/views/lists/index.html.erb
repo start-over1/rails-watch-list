@@ -1,0 +1,19 @@
+<div class="banner-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1614543608792-e9f1b007602f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzMwfHxtb3ZpZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60)">
+ Save any kind of Movies
+</div>
+
+
+  <h1>List of Movies</h1>
+  <ul>
+    <% @lists.each do |list| %>
+      <div class="cards">
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
+          <%= link_to list.name, list_path(list) %>
+        </div>
+      </div>
+    <% end %>
+  </ul>
+</div>
+<%= link_to new_list_path do %>
+  <button type="button" class="btn btn-primary">Create Movie List</button>
+<% end %>
